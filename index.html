@@ -32,23 +32,25 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+        <script type="text/javascript">
+          function popup() {
+            var disp = document.getElementById('floatingDiv').style.display;
+            if(disp == 'block') disp = 'none';
+            else disp = 'block';
+            document.getElementById('floatingDiv').style.display = disp;
+          }
+        </script>
+        <style type="text/css">
+          #floatingDiv {
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+           }
+        </style>
   </head>
-  <script type="text/javascript">
-    function popup() {
-      var disp = document.getElementById('floatingDiv').style.display;
-      if(disp == 'block') disp = 'none';
-      else disp = 'block';
-      document.getElementById('floatingDiv').style.display = disp;
-    }
-  </script>
-  <style type="text/css">
-    #floatingDiv {
-      display: none;
-      position: absolute;
-      top: 100px;
-      left: 100px;
-     }
-  </style>
+
   <body>
       <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THHS7LK"
@@ -60,6 +62,10 @@
       *** TOPBAR ***
       _________________________________________________________
       -->
+      <a href="javascript:popup()">Hello World!</a>
+    <div id="floatingDiv" style="background: #dddddd; width: 320px; height: 240px;">
+      I am a floating div!
+    </div>
       <div id="top">
         <div class="container">
           <div class="row">
